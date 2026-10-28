@@ -1,0 +1,804 @@
+:host {
+  display: block;
+  color: #292a27;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.site-header {
+  height: 78px;
+  background: #fbf8f3;
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid rgba(70, 78, 59, 0.08);
+}
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #252722;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-flower {
+  font-size: 43px;
+  color: #b79a51;
+  line-height: 1;
+}
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+.brand-copy strong {
+  font:
+    500 25px/1.1 Georgia,
+    serif;
+  letter-spacing: -0.5px;
+}
+.brand-copy small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  color: #77766d;
+}
+.nav-content,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-content {
+  gap: 38px;
+}
+.nav-links {
+  gap: 32px;
+}
+.nav-links a,
+.footer-links a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #44443e;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.footer-links a:hover {
+  color: #526c52;
+}
+.nav-cta {
+  padding: 14px 22px;
+  border-radius: 28px;
+  background: #526c52;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.menu-toggle {
+  display: none;
+}
+
+
+
+
+.hero {
+  position: relative;
+  min-height: 454px;
+  height: clamp(454px, 68vh, 650px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #f4eee6;
+  box-sizing: border-box;
+}
+
+
+
+.hero-photo {
+  position: absolute;
+  inset: 0 0 0 39%;
+  background-image:
+    linear-gradient(90deg, rgba(248, 244, 237, 0.1), rgba(248, 244, 237, 0)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;
+  background-position: center 58%;
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #f7f2eb 0%,
+    rgba(247, 242, 235, 0.98) 31%,
+    rgba(247, 242, 235, 0.8) 47%,
+    rgba(247, 242, 235, 0.04) 75%
+  );
+}
+.hero-content {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3.3px;
+  color: #686e5b;
+  margin: 0 0 16px;
+}
+.hero h1,
+.intro-grid h2,
+.section-heading h2,
+.contact-copy h2 {
+  font:
+    500 clamp(38px, 4.2vw, 54px)/0.99 Georgia,
+    "Times New Roman",
+    serif;
+  letter-spacing: -1.6px;
+  margin: 0;
+  color: #282925;
+}
+.hero h1 em,
+.intro-grid h2 em,
+.contact-copy h2 em {
+  font-style: normal;
+}
+.hero-copy {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 490px;
+  color: #464640;
+  margin: 18px 0 19px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border-radius: 28px;
+  padding: 15px 24px;
+  font-size: 14px;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.button:hover,
+.nav-cta:hover {
+  transform: translateY(-1px);
+}
+.button-primary {
+  background: #526c52;
+  color: white;
+  border: 1px solid #526c52;
+}
+.button-primary:hover {
+  background: #78916f;
+}
+.button-primary span {
+  font-size: 20px;
+}
+.trust-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 35px;
+  align-items: center;
+}
+.trust-row > div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #57584f;
+}
+.trust-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+.leaf {
+  color: #b9833d;
+}
+.heart {
+  color: #b9833d;
+}
+.lotus {
+  color: #a78344;
+}
+.intro-section {
+  padding: 62px 0;
+  background: #fbf8f3;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+.intro-grid h2 {
+  font-size: 42px;
+}
+.intro-grid h2 em,
+.contact-copy h2 em {
+  color: #60765a;
+}
+.intro-text {
+  max-width: 630px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #57574f;
+}
+.intro-text p {
+  margin: 0 0 12px;
+}
+.services-section {
+  padding: 60px 0 64px;
+  background: #fffdfa;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+.section-heading h2 {
+  font-size: 40px;
+}
+.section-heading > p:last-child {
+  color: #65645d;
+  font-size: 14px;
+  margin: 13px 0 0;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.service-card {
+  border: 1px solid #e9e4db;
+  border-radius: 15px;
+  text-align: center;
+  padding: 28px 24px 26px;
+  background: #fdfbf7;
+  min-height: 203px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(45, 55, 38, 0.07);
+}
+.service-symbol {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  font-size: 40px;
+}
+.symbol-green {
+  background: #e6e8da;
+  color: #647a55;
+}
+.symbol-gold {
+  background: #f7ebd0;
+  color: #aa8745;
+}
+.symbol-peach {
+  background: #f7e6d8;
+  color: #ad8751;
+}
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 9px;
+}
+.service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64635d;
+  margin: 0 auto;
+  max-width: 270px;
+}
+.values-section {
+  padding: 56px 0 50px;
+  background: #f0f1e8;
+}
+.values-section .section-heading {
+  margin-bottom: 25px;
+}
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.price-card {
+  border-radius: 13px;
+  background: #dfe2d2;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 120px;
+  justify-content: center;
+}
+.price-card.featured {
+  background: #f4e1bf;
+}
+.price-card > span {
+  font-size: 16px;
+}
+.price-card strong {
+  font-size: 31px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+.price-card small {
+  font-size: 12px;
+  color: #66665c;
+}
+.price-note {
+  text-align: center;
+  color: #65645d;
+  font-size: 12px;
+  margin: 20px 0 0;
+}
+.contact-section {
+  padding: 62px 0 66px;
+  background: #fbf8f3;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 55px;
+  align-items: center;
+}
+.contact-copy h2 {
+  font-size: 42px;
+}
+.contact-copy > p:not(.eyebrow) {
+  max-width: 570px;
+  line-height: 1.65;
+  color: #5d5b54;
+  font-size: 15px;
+  margin: 17px 0 22px;
+}
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.button-outline {
+  border: 1px solid #8d897b;
+  color: #49483f;
+  background: transparent;
+}
+.button-outline:hover {
+  background: #f0ece3;
+}
+.contact-card {
+  background: #f5f0e8;
+  border-radius: 14px;
+  padding: 24px 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-card p {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  font-size: 13px;
+  color: #4d4b44;
+  overflow-wrap: anywhere;
+}
+.contact-card p > span:first-child {
+  font-size: 21px;
+  color: #85734c;
+  min-width: 22px;
+}
+.contact-card a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  background: #65785e;
+  color: #f9f5ed;
+}
+.footer-main {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.footer-brand {
+  color: #fff;
+}
+.footer-brand .brand-flower {
+  color: #e9d8a8;
+}
+.footer-brand .brand-copy small {
+  color: #e2e5d9;
+}
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.footer-links a,
+.instagram-link {
+  color: #f6f4ec;
+  text-decoration: none;
+  font-size: 12px;
+}
+.instagram-link {
+  white-space: nowrap;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 18px 0 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #e5e8de;
+}
+@media (max-width: 900px) {
+  .nav-content {
+    gap: 20px;
+  }
+  .nav-links {
+    gap: 17px;
+  }
+  .nav-cta {
+    padding: 12px 15px;
+  }
+  .hero-photo {
+    left: 35%;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      #f7f2eb 0%,
+      rgba(247, 242, 235, 0.96) 38%,
+      rgba(247, 242, 235, 0.7) 60%,
+      rgba(247, 242, 235, 0.08) 100%
+    );
+  }
+  .trust-row {
+    gap: 17px;
+  }
+  .contact-grid {
+    gap: 28px;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 680px) {
+  .wrap {
+    width: min(100% - 34px, 540px);
+  }
+  .site-header {
+    height: 72px;
+  }
+  .brand-flower {
+    font-size: 37px;
+  }
+  .brand-copy strong {
+    font-size: 22px;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 0;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #53674f;
+    display: block;
+  }
+  .nav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72px;
+    background: #fbf8f3;
+    padding: 20px 24px 24px;
+    box-shadow: 0 12px 20px #00000010;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-content.is-open {
+    display: flex;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links a {
+    padding: 13px 0;
+    border-bottom: 1px solid #ece7df;
+  }
+  .nav-cta {
+    text-align: center;
+  }
+  .hero {
+    min-height: 570px;
+    align-items: flex-start;
+  }
+  .hero-photo {
+    inset: 245px 0 0 0;
+    background-position: center;
+    background-image:
+      linear-gradient(
+        0deg,
+        rgba(247, 242, 235, 0.02),
+        rgba(247, 242, 235, 0.02)
+      ),
+      url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80");
+  }
+  .hero-shade {
+    background: linear-gradient(
+      180deg,
+      #f7f2eb 0%,
+      #f7f2eb 38%,
+      rgba(247, 242, 235, 0.88) 52%,
+      rgba(247, 242, 235, 0.04) 78%
+    );
+  }
+  .hero-content {
+    padding-top: 34px;
+    padding-bottom: 20px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.6px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .hero-copy {
+    font-size: 14px;
+    max-width: 440px;
+  }
+  .trust-row {
+    gap: 14px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .trust-row > div {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .trust-icon {
+    font-size: 25px;
+  }
+  .intro-section,
+  .services-section,
+  .contact-section {
+    padding: 44px 0;
+  }
+  .intro-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .intro-grid h2,
+  .contact-copy h2 {
+    font-size: 37px;
+  }
+  .intro-text {
+    font-size: 14px;
+  }
+  .section-heading h2 {
+    font-size: 36px;
+  }
+  .service-grid,
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .service-card {
+    min-height: auto;
+    padding: 23px 18px;
+  }
+  .service-symbol {
+    width: 66px;
+    height: 66px;
+    font-size: 34px;
+  }
+  .values-section {
+    padding: 43px 0;
+  }
+  .price-card {
+    min-height: 100px;
+    padding: 18px;
+  }
+  .price-card strong {
+    font-size: 28px;
+  }
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-card {
+    padding: 22px 18px;
+    gap: 17px;
+  }
+  .contact-card p {
+    font-size: 12px;
+  }
+  .footer-main {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-links {
+    gap: 12px 20px;
+  }
+  .footer-bottom {
+    text-align: left;
+    line-height: 1.6;
+  }
+}
+/* Para cambiar el color al rosado/rojo característico de Instagram */
+.fa-instagram {
+  color: #E1306C;
+  margin-right: 4px; /* Espacio entre el icono y el texto */
+  font-size: 24px; /* Cambia este valor al tamaño que desees (ej: 20px, 28px, 1.5rem) */
+  vertical-align: middle; /* Alinea el ícono horizontalmente con el texto */
+  margin-right: 6px; /* Espacio entre el ícono y el texto */
+}
+
+/* Ajuste de altura de la página de inicio */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El footer queda abajo cuando falta contenido */
+.site-footer {
+  margin-top: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.footer-main {
+  min-height: 78px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.footer-bottom {
+  padding: 10px 0 12px;
+  line-height: 1.4;
+  font-size: 10px;
+}
+
+
+/* ========================================
+   EFECTOS HOVER - YOPRESENCIA
+   ======================================== */
+
+/* Enlaces del menú superior */
+.nav-links a {
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #78916f;
+}
+
+/* Botón Iniciar sesión */
+.nav-cta {
+  min-width: 190px;
+  padding: 15px 34px;
+  text-align: center;
+  box-sizing: border-box;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-cta:hover {
+  background-color: #3f5942;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(63, 89, 66, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Botón principal Contactar y consultar */
+.button-primary {
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.button-primary:hover {
+  background-color: #405741;
+  border-color: #405741;
+  box-shadow: 0 6px 16px rgba(63, 89, 66, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Botones secundarios */
+.button-outline {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.button-outline:hover {
+  background-color: #e6ebdf;
+  border-color: #78916f;
+  color: #78916f;
+}
+
+/* Enlaces del footer */
+.footer-links a {
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #e9d8a8;
+}
+
+/* Evita animaciones excesivas si el usuario las desactiva */
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .nav-cta,
+  .button-primary,
+  .button-outline,
+  .footer-links a {
+    transition: none;
+  }
+}
+
+/* Footer: logo de Instagram y nombre YoPresencia más grandes */
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.fa-instagram {
+  font-size: 25px;
+  margin-right: 0;
+}

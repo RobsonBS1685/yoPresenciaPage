@@ -1,0 +1,24 @@
+-- Base de datos Yopresencia. Importar desde phpMyAdmin en XAMPP.
+CREATE DATABASE IF NOT EXISTS yopresencia CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE yopresencia;
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(190) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('user','admin') NOT NULL DEFAULT 'user',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id BIGINT UNSIGNED NULL,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(190) NOT NULL,
+  subject VARCHAR(120) NOT NULL,
+  message TEXT NOT NULL,
+  status ENUM('nuevo','leido') NOT NULL DEFAULT 'nuevo',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_message_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL,
+  INDEX idx_messages_status_created (status, created_at)
+) ENGINE=InnoDB;
